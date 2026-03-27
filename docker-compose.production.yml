@@ -28,9 +28,9 @@ services:
   frontend:
     image: ${DOCKERHUB_USERNAME}/kittygram_frontend:latest
     container_name: frontend
-    command: cp -r /app/build/. /static/
+    command: cp -r /app/build/. /frontend_static/
     volumes:
-      - static:/static
+      - static:/frontend_static
 
   gateway:
     image: ${DOCKERHUB_USERNAME}/kittygram_gateway:latest
