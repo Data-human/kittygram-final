@@ -25,9 +25,10 @@ jobs:
           pip install -r backend/requirements.txt
 
       - name: Lint backend
+        continue-on-error: true
         run: |
           cd backend
-#          flake8 .
+          flake8 .
 
       - name: Set up Node.js
         uses: actions/setup-node@v4
